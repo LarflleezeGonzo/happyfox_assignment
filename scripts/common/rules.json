@@ -1,0 +1,36 @@
+[
+  {
+    "rules": [
+      {
+        "field_name": "subject",
+        "predicate": "contains",
+        "value": "health"
+      },
+      {
+        "field_name": "date_received",
+        "predicate": "greater_than_days",
+        "value": "2"
+      }
+    ],
+    "predicate": "any",
+    "rule_name": "Rule 1",
+    "actions": {"read": true, "move": true}
+  },
+  {
+    "rules": [
+      {
+        "field_name": "sender",
+        "predicate": "contains",
+        "value": "coding"
+      },
+      {
+        "field_name": "subject",
+        "predicate": "contains",
+        "value": "coding"
+      }
+    ],
+    "predicate": "all",
+    "rule_name": "Rule 2",
+    "actions": {"read": false, "move": false}
+  }
+]
